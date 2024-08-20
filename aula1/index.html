@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Formulário e Menu</title>
+    <style>
+        h1 {
+            font-size: 15px;
+        }
+
+        .grupo {
+            border: 1px solid red;
+        }
+
+        ul {
+            list-style: none;
+            padding: 5px;
+            margin: 5px;
+            display: flex;
+            background-color: #865959;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+            margin: 2px;
+            padding: 10px20px;
+            background-color: rgb(136, 136, 159);
+        }
+
+        ul li:hover {
+            background-color: red;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+
+            margin: 5px;
+        }
+
+        .dropdown-menu{
+            position: absolute;
+            box-shadow: 0 0 2px black;
+            display: none;
+
+        }
+         
+      .dropdown-menu a{
+        display: block;
+        color: black;
+        background-color: burlywood;
+      }
+      
+      .dropdown:hover .dropdown-menu{
+        display: block;
+      }
+
+     
+
+       
+        form {
+            margin: 20px0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5a67d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #716fb8;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+         <ul>
+            <li><a href="">inicio</a></li>
+            <li><a href="">clientes</a></li>
+            <li class="dropdown"><a href=""> serviços</a>
+                 <div class="dropdown-menu">
+                    <a href="">-> Desenvolvimento de Sites</a>
+                    <a href="">-> Criação de Newsletters</a>
+                    <a href="">-> Otimização de SEO</a>
+                    <a href="">-> Design Gráfico</a>
+
+                 </div>
+                
+                <li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">contatos</a></li>
+         </ul>
+
+
+
+
+    </nav>
+
+    <form action="#">
+        <label for="nome">Nome</label>
+        <input type="text" name="campo_nome" id="nome" class="grupo">
+
+        <label for="telefone">Telefone</label>
+        <input type="text" name="campo_telefone" id="telefone">
+
+        <label for="email">Email</label>
+        <input type="text" name="campo_email" id="email">
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <form action="#">
+        <label for="label">Label</label>
+        <input type="text" id="label" name="label">
+        <label>Selecione suas preferências:</label>
+        <input type="checkbox" name="sites_forums" id="sites_forums">
+        <label for="sites_forums">Sites e Fóruns</label><br><input type="checkbox" name="books" id="books"
+            checked><label for="books">Livros</label>
+        <input type="checkbox" name="magazines" id="magazines">
+
+        <label for="magazines">Revistas</label>
+        <input type="checkbox" name="articles" id="articles">
+
+        <label for="articles">Artigos</label>
+
+        <input type="checkbox" name="videos" id="videos">
+        <label for="videos">Vídeos</label>
+
+        <label>Como você quer receber a notificação?</label>
+        <input type="radio" name="notification" value="email" id="email" checked>
+        <label for="email">E-mail</label>
+
+        <input type="radio" name="notification" value="sms" id="sms">
+        <label for="sms">SMS</label>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+
+</html>
